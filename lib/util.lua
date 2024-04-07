@@ -51,10 +51,12 @@ function util:getInfo()
         for _, obj in ipairs(array) do
             if obj.Arch=="" then
                 url = obj.Url
+                sha256 = obj.Sum
             elseif obj.Arch == RUNTIME.archType then
                 url = obj.Url
+                sha256 = obj.Sum
             end
-            sha256 = obj.Sum
+          
         end
 
         table.insert(result, {version = version,note=""})
